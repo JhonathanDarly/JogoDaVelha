@@ -10,7 +10,7 @@ public class Aplication {
 
 		String resultado = "";
 
-		System.out.println("***** Jogo da velha ********");
+		System.out.println("******** Jogo da velha ********");
 		System.out.println();
 		System.out.println("Você é o jogador X");
 		System.err.println();

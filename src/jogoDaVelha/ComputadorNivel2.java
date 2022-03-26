@@ -14,8 +14,11 @@ public class ComputadorNivel2 extends Computador {
 
 		do {
 			currentTime = System.currentTimeMillis();
+			System.out.println("Temppo atual: " + currentTime);
 			timeString = String.valueOf(currentTime);
+			System.out.println("Tempo String: " + timeString);
 			timeString = timeString.substring(timeString.length() - 1);
+			System.out.println("Time String: " + timeString);
 
 			lastChar = Integer.valueOf(timeString);
 

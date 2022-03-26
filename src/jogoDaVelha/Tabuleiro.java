@@ -15,7 +15,6 @@ public class Tabuleiro {
 	}
 
 	public static void iniciarJogo(CampoJogada[][] velha) {
-		cont = 0;
 		for (int linha = 0; linha < 3; linha++) {
 			for (int coluna = 0; coluna < 3; coluna++) {
 				velha[linha][coluna] = new CampoJogada();
@@ -99,16 +98,25 @@ public class Tabuleiro {
 	}
 
 	public static String Empate(CampoJogada[][] velha, String resultado) {
+		cont = 0;
+		for (int linha = 0; linha < 3; linha++) {
+			for (int coluna = 0; coluna < 3; coluna++) {
+				if (velha[linha][coluna].getSimbolo() != ' ') {
+					System.out.println("Entrou no if (cont +1)");
+					cont++;
+					System.out.println("contador=" + cont);
+				}
+				System.out.println("Linha: " + linha + " Coluna:" + coluna);
+			}
 
-		if (velha[0][0].getSimbolo() != ' ' && velha[0][1].getSimbolo() != ' ' && velha[0][2].getSimbolo() != ' '
-				&& velha[1][0].getSimbolo() != ' ' && velha[1][1].getSimbolo() != ' ' && velha[1][2].getSimbolo() != ' '
-				&& velha[2][0].getSimbolo() != ' ' && velha[2][1].getSimbolo() != ' '
-				&& velha[2][2].getSimbolo() != ' ') {
-
+		}
+		if (cont == 9) {
+			System.out.println("Entrou no IF (cont == 9)");
 			resultado = "Deu velha, jogo empatado! ";
 		} else {
 			resultado = "";
 		}
+
 		return resultado;
 	}
 
