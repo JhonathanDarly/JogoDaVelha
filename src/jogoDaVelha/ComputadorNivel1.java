@@ -5,7 +5,14 @@ import java.util.Scanner;
 
 public class ComputadorNivel1 extends Computador {
 
-	public static int[] jogadaComputadorNivel1(Scanner scan, char simboloAtual) {
+	private static int[] p = new int[2];
+	
+	public ComputadorNivel1() {
+		super(p);
+	}
+
+	@Override
+	public int[] jogadaComputador(char simboloAtual) {
 		Random aleatorio = new Random();
 		int p[] = new int[2];
 		p[0] = aleatorio.nextInt(3);
@@ -16,4 +23,5 @@ public class ComputadorNivel1 extends Computador {
 
 		return p;
 	}
+
 }

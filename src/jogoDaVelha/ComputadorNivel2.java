@@ -5,8 +5,17 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class ComputadorNivel2 extends Computador {
+	
+	
+	private static int[] p = new int[2];
+	
+	public ComputadorNivel2() {
+		super(p);
+	}
 
-	public static int[] jogadaComputadorNivel2(Scanner scan, char simboloAtual) {
+	@Override
+	public int[] jogadaComputador (char simboloAtual) {
+		
 		int p[] = new int[2];
 		int lastChar;
 		long currentTime;
@@ -14,12 +23,8 @@ public class ComputadorNivel2 extends Computador {
 
 		do {
 			currentTime = System.currentTimeMillis();
-			System.out.println("Temppo atual: " + currentTime);
 			timeString = String.valueOf(currentTime);
-			System.out.println("Tempo String: " + timeString);
 			timeString = timeString.substring(timeString.length() - 1);
-			System.out.println("Time String: " + timeString);
-
 			lastChar = Integer.valueOf(timeString);
 
 			try {
@@ -50,7 +55,7 @@ public class ComputadorNivel2 extends Computador {
 		System.out.println("Linha esolhida: " + p[0]);
 		System.out.println("Coluna esolhida: " + p[1]);
 
+				
 		return p;
 	}
-
 }

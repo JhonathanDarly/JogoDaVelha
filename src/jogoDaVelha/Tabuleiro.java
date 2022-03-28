@@ -102,11 +102,8 @@ public class Tabuleiro {
 		for (int linha = 0; linha < 3; linha++) {
 			for (int coluna = 0; coluna < 3; coluna++) {
 				if (velha[linha][coluna].getSimbolo() != ' ') {
-					System.out.println("Entrou no if (cont +1)");
 					cont++;
-					System.out.println("contador=" + cont);
 				}
-				System.out.println("Linha: " + linha + " Coluna:" + coluna);
 			}
 
 		}
@@ -131,8 +128,8 @@ public class Tabuleiro {
 			p = jogadorHumano.jogadaHumana(sc, simboloAtual);
 
 		} else {
-			ComputadorNivel1 comp = new ComputadorNivel1();
-			p = comp.jogadaComputadorNivel1(sc, simboloAtual);
+			Computador comp = new ComputadorNivel1();
+			p = comp.jogadaComputador(simboloAtual);
 		}
 
 		return p;
@@ -150,8 +147,8 @@ public class Tabuleiro {
 			p = jogadorHumano.jogadaHumana(sc, simboloAtual);
 
 		} else {
-			ComputadorNivel2 comp = new ComputadorNivel2();
-			p = comp.jogadaComputadorNivel2(sc, simboloAtual);
+			Computador comp = new ComputadorNivel2();
+			p = comp.jogadaComputador(simboloAtual);
 		}
 
 		return p;
@@ -169,8 +166,8 @@ public class Tabuleiro {
 			p = jogadorHumano.jogadaHumana(sc, simboloAtual);
 
 		} else {
-			ComputadorNivel3 comp = new ComputadorNivel3();
-			p = comp.jogadaComputadorNivel3(sc, simboloAtual);
+			Computador comp = new ComputadorNivel3(simboloAtual);
+			p = comp.jogadaComputador(simboloAtual);
 		}
 
 		return p;
