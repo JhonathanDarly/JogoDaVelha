@@ -3,11 +3,12 @@ package jogoDaVelha;
 public class CampoJogada {
 	private char simbolo;
 
-	// Contrutores padrão.
+	// Construtor padrão.
 	public CampoJogada() {
 		this.simbolo = ' ';
 	}
 
+	// Função get para pegar informação.
 	public char getSimbolo() {
 		return simbolo;
 	}

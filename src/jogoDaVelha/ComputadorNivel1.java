@@ -5,12 +5,17 @@ import java.util.Scanner;
 
 public class ComputadorNivel1 extends Computador {
 
-	private static int[] p = new int[2];
+	private static int[] p = new int[2]; // Instanciando variável tipo lista.
 	
-	public ComputadorNivel1() {
+	public ComputadorNivel1() { // Construtor padrão
 		super(p);
 	}
 
+	// Método que subscreve os dados na classe computador
+	// Aqui foi usado o método Random para gerar numeros aleatórios
+	// Única regra utilizada foi limitar o tamanho dos numeros gerados
+	// Retorna na variável P os valores gerados aleatoriamente para linha e coluna.
+	
 	@Override
 	public int[] jogadaComputador(char simboloAtual) {
 		Random aleatorio = new Random();

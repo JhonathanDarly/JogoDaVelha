@@ -6,19 +6,21 @@ import java.util.Random;
 
 public class Computador {
 	
-	int []p;
+	int []p; // Variável tipo list
 
-	public Computador(int[] p) {
+	public Computador(int[] p) { //Construtor padrão
 		this.p = p;
 	}
 
-	public int[] getP() {
+	public int[] getP() {  // Método Get para pegar os dados informados.
 		return p;
 	}
 
-	public void setP(int[] p) {
+	public void setP(int[] p) { // Método Set para colocar os dados informados.
 		this.p = p;
 	}
+	
+	// Método que pega a jogada do computador.
 	
 	public int[] jogadaComputador (char simboloAtual) {
 		
